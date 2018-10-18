@@ -1,0 +1,94 @@
+JFDML JFormDesigner: "6.0.2.0.116" Java: "1.8.0_151" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq l {space :::x, par l {comp btnApagar::l:p::p, comp btnSoporte::l:p::p, comp btnEncender::l:p::p}, space u:::p, comp panelSoporte:::p::p}}"
+			"$verticalGroup": "par l {comp panelSoporte:::::x, seq l {space :::p, comp btnEncender:::p:94:p, space :::p, comp btnSoporte:::p:94:p, space :::p, comp btnApagar:::p:94:p, space :::x}}"
+		} ) {
+			name: "this"
+			"defaultCloseOperation": 3
+			"title": "Soporte URP"
+			"background": new java.awt.Color( 255, 255, 255, 255 )
+			"resizable": false
+			"$locationPolicy": 1
+			addEvent( new FormEvent( "java.awt.event.WindowListener", "windowClosing", "formWindowClosing", true ) )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, par l {comp jScrollPane1:::::x, seq {comp mensaje::::300:x, space :::p, comp enviar:::p:121:p}}, space :::p}}"
+				"$verticalGroup": "par l {seq l {space :::p, comp jScrollPane1:::::x, space u:::p, par l:::p {comp mensaje::::33:x, comp enviar:::::x}, space :::p}}"
+			} ) {
+				name: "panelSoporte"
+				"alignmentX": 0.0f
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "mensaje"
+					"text": "Escriba su mensaje"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "enviar"
+					"text": "Enviar"
+					auxiliary() {
+						"JavaCodeGenerator.variableModifiers": 1
+					}
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "enviarActionPerformed", true ) )
+				} )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "jScrollPane1"
+					add( new FormComponent( "javax.swing.JTextPane" ) {
+						name: "mensajes"
+						"editable": false
+						"contentType": "text/html"
+						auxiliary() {
+							"JavaCodeGenerator.variableModifiers": 1
+						}
+					} )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnApagar"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/imagenes/apagarpc.png" )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"contentAreaFilled": false
+				"enabled": false
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnApagarActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnSoporte"
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/imagenes/soporte.png" )
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"contentAreaFilled": false
+				"enabled": false
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnSoporteActionPerformed", true ) )
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "btnEncender"
+				"font": new com.jformdesigner.model.SwingDerivedFont( null, 65536, 0, false )
+				"icon": new com.jformdesigner.model.SwingIcon( 0, "/imagenes/encender.png" )
+				"text": "Hola"
+				"toolTipText": ""
+				"border": sfield com.jformdesigner.model.FormObject NULL_VALUE
+				"contentAreaFilled": false
+				"enabled": false
+				auxiliary() {
+					"JavaCodeGenerator.variableModifiers": 1
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "btnEncenderActionPerformed", true ) )
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"size": new java.awt.Dimension( 400, 300 )
+		} )
+		add( new FormComponent( "javax.swing.JMenuItem" ) {
+			name: "jMenuItem3"
+			"text": "jMenuItem3"
+		} )
+	}
+}
